@@ -24,11 +24,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate { //AvAudioPlayerD
     }
 
     @IBAction func notePressed(_ sender: UIButton) {
-        let noteSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "note\(sender.tag)", ofType: "wav")!) //Create URL of the Sound file location
+        let noteSound = Bundle.main.url(forResource: "note\(sender.tag)", withExtension: "wav") //Create URL of the Sound file location
         do { //Settig up the sound file
-            audioPlayer = try AVAudioPlayer(contentsOf: noteSound as URL)
+            audioPlayer = try AVAudioPlayer(contentsOf: noteSound!)
         } catch { //if there is a problem is printing the message
-            print("Problem in getting File")
+            print(error)
         }
        audioPlayer.play() //playing the sound
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		169EA12B2077CDAD0011E511 /* shakeRollDice.wav in Resources */ = {isa = PBXBuildFile; fileRef = 169EA12A2077CDAD0011E511 /* shakeRollDice.wav */; };
 		16AA4BB220721DC2001E7B57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AA4BB120721DC2001E7B57 /* AppDelegate.swift */; };
 		16AA4BB420721DC2001E7B57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AA4BB320721DC2001E7B57 /* ViewController.swift */; };
 		16AA4BB720721DC2001E7B57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16AA4BB520721DC2001E7B57 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		169EA12A2077CDAD0011E511 /* shakeRollDice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shakeRollDice.wav; sourceTree = "<group>"; };
 		16AA4BAE20721DC2001E7B57 /* DiceRoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AA4BB120721DC2001E7B57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16AA4BB320721DC2001E7B57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		169EA1292077CD8C0011E511 /* Sound Files */ = {
+			isa = PBXGroup;
+			children = (
+				169EA12A2077CDAD0011E511 /* shakeRollDice.wav */,
+			);
+			path = "Sound Files";
+			sourceTree = "<group>";
+		};
 		16AA4BA520721DC2001E7B57 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 				16AA4BB820721DC3001E7B57 /* Assets.xcassets */,
 				16AA4BBA20721DC3001E7B57 /* LaunchScreen.storyboard */,
 				16AA4BBD20721DC3001E7B57 /* Info.plist */,
+				169EA1292077CD8C0011E511 /* Sound Files */,
 			);
 			path = DiceRoll;
 			sourceTree = "<group>";
@@ -125,6 +136,7 @@
 				16AA4BBC20721DC3001E7B57 /* LaunchScreen.storyboard in Resources */,
 				16AA4BB920721DC3001E7B57 /* Assets.xcassets in Resources */,
 				16AA4BB720721DC2001E7B57 /* Main.storyboard in Resources */,
+				169EA12B2077CDAD0011E511 /* shakeRollDice.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

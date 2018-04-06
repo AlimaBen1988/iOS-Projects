@@ -9,9 +9,9 @@
 import UIKit
 import AVFoundation  //Library of Audio and Video
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate { //AvAudioPlayerDelegate allows a delegate to respond to audio interruptions and audio decoding errors, and to the completion of a sound’s playback
     
-    var audioPlayer = AVAudioPlayer()
+    var audioPlayer = AVAudioPlayer() //define the variable as audioplayer
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func notePressed(_ sender: UIButton) {
-        let noteSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "note\(sender.tag)", ofType: "wav")!) //Configure the Sound file
-        do { //settig up the sound file
+        let noteSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "note\(sender.tag)", ofType: "wav")!) //Create URL of the Sound file location
+        do { //Settig up the sound file
             audioPlayer = try AVAudioPlayer(contentsOf: noteSound as URL)
         } catch { //if there is a problem is printing the message
             print("Problem in getting File")

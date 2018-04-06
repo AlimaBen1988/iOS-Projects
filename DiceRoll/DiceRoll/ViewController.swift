@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AVAudioPlayerDelegate {
+    
+    var audioPlayer = AVAudioPlayer() //audio player for sound
+    let noteSound = NSURL(fileURLWithPath: Bundle.main.path(forResource: "shakeRollDice", ofType: "wav")!) //Create URL of the Sound file location
     
     var randomRightDice : Int = 0 // variable for random rigth dice
     var randomLeftDice : Int = 0 // variable for random rigth dice
@@ -41,6 +45,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rollButton(_ sender: UIButton) {
+        do { //Settig up the sound file
+            audioPlayer = try AVAudioPlayer(contentsOf: noteSound as URL)
+        } catch { //if there is a problem is printing the message
+            print("Problem in getting File")
+        }
+        audioPlayer.play()
         randomizeDicesImages() //roll the dices when press on ROLL button
     }
     
